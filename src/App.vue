@@ -1,20 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main">
+    <h1>{{ title }}</h1>
+    <my-form />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MyForm from "./components/MyForm.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+
+  /* Componentes importados */
   components: {
-    HelloWorld
-  }
-}
+    MyForm,
+  },
+
+  /* "Dados" e retorno dos dados */
+  data() {
+    return {
+      title: "Course Vue3",
+    };
+  },
+
+  methods: {},
+};
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,5 +35,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
