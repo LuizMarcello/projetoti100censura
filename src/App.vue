@@ -1,7 +1,10 @@
 <template>
   <div class="main">
     <h1>{{ title }}</h1>
-    <my-form />
+    <!-- "Coloring": Capturando este evento personalizado
+         emitido pelo "$emit" no componente MyForm -->
+    <!-- Com v-bind (":") é dinâmica -->
+    <my-form @Coloring="myColor" :class="customColor" />
   </div>
 </template>
 
@@ -20,10 +23,15 @@ export default {
   data() {
     return {
       title: "Course Vue3",
+      customColor: "",
     };
   },
 
-  methods: {},
+  methods: {
+    myColor() {
+      this.customColor = "coloring";
+    },
+  },
 };
 </script>
 
@@ -40,5 +48,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.coloring {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36));
+  color: white;
 }
 </style>

@@ -10,7 +10,7 @@
 export default {
   /* Declaração das "props" */
   /* "props"(propriedades).São do "pai" para o "filho" */
-  /* São declaradas no "filho" */
+  /* São declaradas no componente "filho" */
   /* Tipos de props permitidos no Vue3:
      String, Number, Boolean, Array,
      Object, Date, Function, Symbol */
