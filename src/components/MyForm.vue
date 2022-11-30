@@ -1,6 +1,6 @@
 <template>
   <form class="form">
-    <my-input class="myinput" name="Nome: " />
+    <my-input class="myinput" name="Nome: " number="3"/>
     <my-input class="myinput" name="Email: " />
     <my-input class="myinput" name="Fone: " />
     <my-input class="myinput" name="Senha: " />

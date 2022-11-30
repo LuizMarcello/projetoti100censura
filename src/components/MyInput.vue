@@ -2,14 +2,29 @@
   <div>
     <label for="myInput">{{ name }}</label>
     <input id="myInput" type="text" />
+    <span>{{ number }}</span>
   </div>
 </template>
 
 <script>
 export default {
-  /* As "props" */
+  /* Declaração das "props" */
+  /* "props"(propriedades).São do "pai" para o "filho" */
+  /* São declaradas no "filho" */
+  /* Tipos de props permitidos no Vue3:
+     String, Number, Boolean, Array,
+     Object, Date, Function, Symbol */
+  /* Quando não precisa passar detalhes, como "type",
+     "required", etc, pode ser declarada como um array
+     de propriedades: */
+  /* props: ["name", "number"], */
   props: {
     name: {
+      type: String,
+      required: true,
+      /* default: "Ola", */
+    },
+    number: {
       type: String,
       required: true,
     },
